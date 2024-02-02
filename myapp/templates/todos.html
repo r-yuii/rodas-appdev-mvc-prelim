@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+{% block content %}
+<h1><img height="80" src="https://holostars.hololivepro.com/wp-content/themes/holostars/images/svg/h_talent.svg"></h1>
+<ul>
+    {% for todo in todos %}
+    <li>
+        {{ todo.title }}: 
+            {% if todo.completed %} 
+                Complete Members
+            {% else %}
+                Incomplete 
+            {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
